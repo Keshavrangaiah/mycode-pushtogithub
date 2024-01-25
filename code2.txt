@@ -1,0 +1,23 @@
+git>>>git-hub>>>
+
+create a folder 
+create 2 text document to write the code
+
+$ git init
+create a new repository
+
+go to view and show hidden files-creates a new repository as .git
+
+$ git status
+
+To add username(git-hub name) and email address
+$ git config --global user.name "keshavrangaiah"
+$ git config --global user.id "keshavbr89@gmail.com"
+
+$ git add code1.txt
+
+to add all to staging area
+$ git add .
+
+
+ 

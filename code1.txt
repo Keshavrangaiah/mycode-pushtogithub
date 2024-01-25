@@ -1,0 +1,32 @@
+_______________________
+Jenkins-Quick Setup
+_______________________
+
+switch to root
+ $ sudo -i
+
+switch to hostname
+$ hostname Jenkins-server
+
+$ exit  
+$ sudo -i
+
+$ cd /opt
+
+Create 1 script
+vi jenkins-installation.sh
+# Run Below Script in vi jenkins-installation.sh
+
+#! /bin/bash
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade -y
+# Add required dependencies for the jenkins package
+sudo amazon-linux-extras install java-openjdk11 -y
+sudo yum install jenkins -y
+sudo systemctl daemon-reload
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+
+
